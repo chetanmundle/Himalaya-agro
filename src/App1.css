@@ -163,7 +163,7 @@ body {
 
 .floting-container {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   top: 60%;
   right: 10px;
   /* display: flex; */
@@ -188,9 +188,42 @@ body {
 
 .btn-cart1 {
   margin: 0px 20px 10px 20px;
-  
 }
 
-.floting-cart-item{
+.floting-cart-item {
   display: flex;
+}
+
+.copyright {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.ads-container {
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.ads-chaild {
+  width: 25%;
+}
+
+.ads-delivery {
+  display: flex;
+  justify-content: center;
+}
+.add-img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 1s;
+}
+
+.add-img:hover {
+  transform: scale(1.2);
 }

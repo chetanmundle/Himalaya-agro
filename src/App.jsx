@@ -8,6 +8,7 @@ import { Route, Router, Routes } from "react-router-dom";
 import Home from "./Pages/Home";
 import FlotingCartBtn from "./components/FlotingCartBtn";
 import Test from "./Pages/Test";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/test" element={<Test />} />
       </Routes>
+
+      <Footer/>
     </>
   );
 }
