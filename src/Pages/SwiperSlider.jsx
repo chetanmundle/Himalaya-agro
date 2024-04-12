@@ -69,6 +69,7 @@ const SwiperSlider = () => {
       >
         <SwiperSlide>
           <img src={apple} alt="nature-1" />
+          <div className="swiper-htext">Hello</div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={banana} alt="nature-2" />
@@ -78,6 +79,7 @@ const SwiperSlider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={kiwi} alt="nature-4" />
+        
         </SwiperSlide>
         <SwiperSlide>
           <img src={orange} alt="nature-5" />

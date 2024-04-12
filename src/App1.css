@@ -314,3 +314,8 @@ body {
   fill: url('#gradientColor');
   transition: all 0.3s ease;
 }
+
+.swiper-btn{
+  background-color: red;
+  text-align: center ;
+}
