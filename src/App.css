@@ -1,0 +1,244 @@
+.nav-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+}
+
+.upper-nav-wrap {
+  background-color: #044823;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.wrap-1,
+.wrap-2 {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.ele {
+  color: white;
+  text-decoration: none;
+  padding: 7px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.icon {
+  font-size: 17px;
+  padding: 0 2px;
+}
+
+.wrap-2 {
+  margin-right: 40px;
+}
+
+.lower-nav-wrap {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 75px;
+  position: relative;
+  margin: 0 30px;
+
+}
+
+.right-btns {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.icons {
+  font-size: 22px;
+  margin: 0 15px;
+  color: #434242;
+}
+
+.nav-items {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+nav {
+  display: flex !important;
+  position: absolute;
+  margin-top: 15px;
+  font-family: "Hind Siliguri", sans-serif;
+  z-index: 111;
+
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #434242;
+  padding: 1rem;
+  font-size: 15px;
+  background: white;
+  transition: background 0.5s;
+  display: block;
+  outline: 0;
+  text-align: center;
+  z-index: 11;
+}
+
+nav a:hover,
+nav li:focus-within>a {
+  color: #044823;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all ease-in-out .3s;
+}
+
+/* Make the dropdown animate. */
+.dropdown-content {
+  min-width: fit-content;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s;
+  display: block;
+  z-index: 11;
+}
+
+/* The max-height should be set to something that will always be a little bit bigger than the height of the content. */
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  max-height: 200px;
+}
+
+
+/* Carousel  */
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.embla__slide h1 {
+  color: #434242;
+  font-size: 3.4rem;
+  width: 600px;
+  text-align: center;
+
+}
+
+.info-wrap {
+  transform: translateY(12%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-wrap p {
+  text-align: center;
+  color: #434242;
+  font-size: 27px;
+  margin-top: -20px;
+}
+
+.button {
+  outline: none;
+  padding: 16px 35px;
+  font-size: 17px;
+  background-color: #044823;
+  border: none;
+  border-top-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+
+.button:hover {
+  background-color: #03bb56;
+  color: rgb(0, 0, 0);
+  transition: all ease-in-out .3s;
+}
+
+
+
+.embla__slide:nth-child(1) {
+  background-image: url(./assets/8.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 630px;
+}
+
+.embla__slide:nth-child(3) {
+  background-image: url(./assets/4.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 630px;
+}
+
+.embla__slide:nth-child(2) {
+  background-image: url(./assets/7.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 630px;
+  justify-content: left;
+
+}
+
+.embla__slide:nth-child(even) h1 {
+  text-align: left;
+  margin-left: 150px;
+}
+
+.embla__slide:nth-child(even) .info-wrap {
+  align-items: start;
+}
+
+
+.embla__slide:nth-child(even) .info-wrap p,
+button {
+  text-align: left !important;
+  margin-left: 150px;
+}
+
+.embla__slide:nth-child(odd) .info-wrap
+button {
+  margin-left: 0;
+}
+.embla__slide:nth-child(4) {
+  background-image: url(./assets/5.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 630px;
+  justify-content: left;
+  
+}
+
+

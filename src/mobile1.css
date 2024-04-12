@@ -1,0 +1,80 @@
+
+/* CSS for mobile view */
+@media only screen and (max-width: 767px) {
+    .nav-items {
+      /* display: flex; */
+      /* width: 100%;
+          justify-content: center; */
+    }
+  
+    .nav-items {
+      /* display: none; */
+    }
+  
+    .three-line {
+      display: block;
+    }
+  
+    @keyframes roll {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+  
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  
+    nav ul {
+      flex-direction: column;
+      width: 80%;
+      animation: roll 0.4s ease-in-out;
+    }
+  
+    nav {
+      width: 100%;
+      margin-top: 78px;
+    }
+  
+    .hidediv {
+      display: none;
+    }
+  
+    .cross {
+      font-weight: bolder;
+      font-size: 30px;
+    }
+  
+    .upper-nav-wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .wrap-1 {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .wrap-2 {
+      /* display: none; */
+      margin-top: 5px;
+      flex-wrap: wrap;
+    }
+  
+    .wrap-1 .ele:nth-child(3) {
+      display: none;
+    }
+  
+    .input-head input {
+      width: 90% !important;
+    }
+  
+    .inner-search {
+      right: 5%;
+    }
+  }
+  
+  
+  

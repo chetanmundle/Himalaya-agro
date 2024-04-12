@@ -1,0 +1,196 @@
+body {
+  color: #000;
+}
+
+.input-head {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  outline: none;
+  overflow: hidden; /* Ensure content outside the box is hidden */
+  z-index: 3;
+  background-color: transparent;
+}
+
+.input-head input {
+  position: relative;
+  width: 0; /* Start with width as 0 */
+  height: 80%;
+  background-color: aliceblue;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+
+  outline: none;
+  border-color: green;
+  animation: slideFromLeft 1s forwards;
+  background-color: transparent;
+  backdrop-filter: blur(3px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.input-head input:hover {
+  backdrop-filter: blur(10px); /* Increase blur on hover */
+}
+
+@keyframes slideFromLeft {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60%; /* Slide to 60% width */
+  }
+}
+@keyframes opacityforsearch {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.inner-search {
+  animation: opacityforsearch 3s ease-in-out;
+  position: absolute;
+  right: 20%;
+}
+
+.three-line {
+  color: black;
+  display: none;
+}
+
+.boldtext {
+  font-weight: bold;
+}
+
+.dropdown-content {
+  width: 100%;
+}
+
+.swiper-container {
+  color: #000;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.swiper-h2 h2 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 30px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.btn-cart {
+  display: flex;
+  /* for center div from height and width */
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border: 2px solid green;
+  background-color: #50b033;
+}
+
+.btn-cart::after {
+  content: attr(data-quantity);
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  font-size: 15px;
+  color: #000;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  visibility: visible;
+  transition: 0.2s linear;
+
+  opacity: 1;
+  top: 105%;
+}
+
+.icon-cart {
+  width: 24.38px;
+  height: 30.52px;
+  transition: 0.2s linear;
+}
+
+.icon-cart path {
+  /* fill: #50b033; */
+  fill: white;
+
+  transition: 0.2s linear;
+}
+
+.btn-cart:hover > .icon-cart {
+  transform: scale(1.2);
+}
+
+.btn-cart:hover > .icon-cart path {
+  fill: yellow;
+}
+
+.btn-cart:hover {
+  box-shadow: rgba(218, 226, 218, 0.5) 0px 14px 28px,
+    rgba(200, 208, 200, 0.4) 0px 10px 10px;
+}
+
+.floting-container {
+  position: fixed;
+  z-index: 1;
+  top: 60%;
+  right: 10px;
+  /* display: flex; */
+}
+
+.cart-container {
+  height: 100%;
+  width: 30%;
+  background-color: #000;
+  position: fixed;
+  z-index: 300;
+  top: 0%;
+  right: 10px;
+}
+
+.cart-basket {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-cart1 {
+  margin: 0px 20px 10px 20px;
+  
+}
+
+.floting-cart-item{
+  display: flex;
+}
