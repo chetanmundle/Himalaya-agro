@@ -52,7 +52,7 @@ const Section2 = () => {
 
             <div class="project-info">
               <div class="flex">
-                <div class="project-title">Title card</div>
+                <div class="project-title">Ready Made Boxes</div>
                 {/* <span class="tag">type</span> */}
               </div>
               <span class="lighter">
@@ -71,7 +71,7 @@ const Section2 = () => {
 
             <div class="project-info">
               <div class="flex">
-                <div class="project-title">Title card</div>
+                <div class="project-title">Create Your Own Boxes</div>
                 {/* <span class="tag">type</span> */}
               </div>
               <span class="lighter">

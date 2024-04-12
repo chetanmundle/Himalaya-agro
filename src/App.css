@@ -175,7 +175,7 @@ nav li:focus-within>a {
   outline: none;
   padding: 16px 35px;
   font-size: 17px;
-  background-color: #044823;
+  background-color: #0ca04e;
   border: none;
   border-top-left-radius: 28px;
   border-bottom-right-radius: 28px;
@@ -211,6 +211,14 @@ nav li:focus-within>a {
   justify-content: left;
 
 }
+.embla__slide:nth-child(4) {
+  background-image: url(./assets/5.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 630px;
+  justify-content: left;
+  
+}
 
 .embla__slide:nth-child(even) h1 {
   text-align: left;
@@ -231,14 +239,6 @@ button {
 .embla__slide:nth-child(odd) .info-wrap
 button {
   margin-left: 0;
-}
-.embla__slide:nth-child(4) {
-  background-image: url(./assets/5.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 630px;
-  justify-content: left;
-  
 }
 
 

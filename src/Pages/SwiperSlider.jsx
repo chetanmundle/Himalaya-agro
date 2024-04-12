@@ -43,7 +43,7 @@ const SwiperSlider = () => {
       </style>
 
       <div className="swiper-h2">
-        <h2>Fruits Gallery</h2>
+        <h2>Products Offering</h2>
       </div>
 
       <Swiper
