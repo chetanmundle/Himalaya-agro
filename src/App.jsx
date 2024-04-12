@@ -1,5 +1,6 @@
 import "./App.css";
 import "./App1.css";
+import "./App2.css";
 import "./mobile1.css";
 import "./tab1.css";
 import Carousel from "./components/Carousel";
