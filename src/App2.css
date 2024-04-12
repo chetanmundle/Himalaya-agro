@@ -1,0 +1,139 @@
+.Section2 {
+    height: 500px;
+    background-color: rgb(239, 236, 235);
+    display: flex;
+    gap: 3%;
+    padding: 5%;
+
+
+    /* padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%; */
+
+}
+
+.sec-chaild {
+    width: 50%;
+    gap: 2%;
+}
+
+.Section2-Qaulity-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 20px;
+}
+
+
+/* card section */
+.project-info {
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    top: -50px;
+}
+
+.project-title {
+    font-weight: 500;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+    margin-top: 5%;
+}
+
+.lighter {
+    font-size: 0.9em;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tag {
+    font-weight: lighter;
+    color: grey;
+}
+
+/*DELETE THIS TWO LINE*/
+.delete {
+    background-color: #b2b2fd;
+}
+
+.card-img div {
+    width: 90%;
+}
+
+/*IF USING IMAGES*/
+
+.card {
+    background-color: white;
+    color: black;
+    width: 330px;
+    max-height: 350px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.card-img {
+    position: relative;
+    top: -20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Change the .card-img div to .card-img img to use img*/
+.card-img a,
+.card-img div {
+    height: 150px;
+    width: 90%;
+    /* Change this width here to change the width of the color/image */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-imgs {
+    transition: all 0.5s;
+}
+
+.card-img img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media (min-width: 576px) {
+    .Section2 {
+        flex-direction: column;
+        height: auto;
+        align-items: center; /* Remove fixed height */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .Section2 {
+        padding: 3%; /* Adjust padding */
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .Section2 {
+        gap: 1%; /* Adjust gap between flex items */
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .Section2 {
+        padding: 2%; /* Further adjust padding */
+    }
+}
