@@ -85,11 +85,11 @@ export default function CardSlider() {
         // slidesPerView={4}
         // centeredSlides={true}
         spaceBetween={30}
-        // autoplay={{
-        //   delay: 1000,
-        //   disableOnInteraction: false,
-        //   pauseOnMouseEnter: true,
-        // }}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
         pagination={{
           type: "fraction",
         }}
