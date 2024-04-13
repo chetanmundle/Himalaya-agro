@@ -2,7 +2,6 @@
   width: 100%;
   height: auto;
   position: relative;
-
 }
 
 .upper-nav-wrap {
@@ -52,7 +51,6 @@
   width: 75px;
   position: relative;
   margin: 0 30px;
-
 }
 
 .right-btns {
@@ -79,7 +77,6 @@ nav {
   margin-top: 15px;
   font-family: "Hind Siliguri", sans-serif;
   z-index: 111;
-
 }
 
 nav ul {
@@ -105,11 +102,11 @@ nav a {
 }
 
 nav a:hover,
-nav li:focus-within>a {
+nav li:focus-within > a {
   color: #044823;
   cursor: pointer;
   font-weight: 500;
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
 
 /* Make the dropdown animate. */
@@ -128,7 +125,6 @@ nav li:focus-within>a {
 .dropdown:focus-within .dropdown-content {
   max-height: 200px;
 }
-
 
 /* Carousel  */
 
@@ -154,7 +150,6 @@ nav li:focus-within>a {
   font-size: 3.4rem;
   width: 600px;
   text-align: center;
-
 }
 
 .info-wrap {
@@ -184,10 +179,8 @@ nav li:focus-within>a {
 .button:hover {
   background-color: #03bb56;
   color: rgb(0, 0, 0);
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out 0.3s;
 }
-
-
 
 .embla__slide:nth-child(1) {
   background-image: url(./assets/8.jpg);
@@ -209,7 +202,6 @@ nav li:focus-within>a {
   background-position: center;
   height: 630px;
   justify-content: left;
-
 }
 .embla__slide:nth-child(4) {
   background-image: url(./assets/5.jpg);
@@ -217,7 +209,6 @@ nav li:focus-within>a {
   background-position: center;
   height: 630px;
   justify-content: left;
-  
 }
 
 .embla__slide:nth-child(even) h1 {
@@ -229,16 +220,12 @@ nav li:focus-within>a {
   align-items: start;
 }
 
-
 .embla__slide:nth-child(even) .info-wrap p,
-button {
+.info-wrap-button {
   text-align: left !important;
   margin-left: 150px;
 }
 
-.embla__slide:nth-child(odd) .info-wrap
-button {
+.embla__slide:nth-child(odd) .info-wrap button {
   margin-left: 0;
 }
-
-

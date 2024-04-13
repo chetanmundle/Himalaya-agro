@@ -248,7 +248,7 @@ body {
   align-items: center;
   flex-direction: column;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .ads-icon {
@@ -311,6 +311,34 @@ body {
 }
 
 .ads-card:hover .ads-icon img {
-  fill: url('#gradientColor');
+  fill: url("#gradientColor");
   transition: all 0.3s ease;
 }
+
+.swiper-htext {
+  position: relative;
+  text-align: center;
+  bottom: 100px;
+  visibility: hidden;
+}
+
+.swiper-htext Button{
+  background-color: green;
+}
+
+.swiper-slide:hover .swiper-htext {
+  visibility: visible;
+  animation: slideFromBottom 0.5s forwards;
+}
+
+@keyframes slideFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

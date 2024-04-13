@@ -13,6 +13,7 @@ import pineapple from "../assets/pineapple.png";
 import strobery from "../assets/strobery.png";
 import cherry from "../assets/cheery.png";
 import mango from "../assets/mango.png";
+import { Button } from "@chakra-ui/button";
 
 const SwiperSlider = () => {
   return (
@@ -69,30 +70,57 @@ const SwiperSlider = () => {
       >
         <SwiperSlide>
           <img src={apple} alt="nature-1" />
+          <div className="swiper-htext">
+            <Button>View More</Button>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={banana} alt="nature-2" />
+          <div className="swiper-htext">
+            <Button>View More</Button>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={grapes} alt="nature-3" />
+          <div className="swiper-htext">
+            <Button>View More</Button>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={kiwi} alt="nature-4" />
+          <div className="swiper-htext">
+            <Button>View More</Button>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={orange} alt="nature-5" />
+          <div className="swiper-htext">
+            <Button>View More</Button>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={pineapple} alt="nature-6" />
+          <div className="swiper-htext">
+            <Button>View More</Button>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={strobery} alt="nature-7" />
+          <div className="swiper-htext">
+            <Button>View More</Button>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={cherry} alt="nature-8" />
+          <div className="swiper-htext">
+            <Button>View More</Button>
+          </div>
         </SwiperSlide>
         <SwiperSlide>
           <img src={mango} alt="nature-9" />
+          <div className="swiper-htext">
+            <Button>View More</Button>
+          </div>
         </SwiperSlide>
       </Swiper>
     </>

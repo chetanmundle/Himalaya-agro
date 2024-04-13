@@ -78,7 +78,7 @@
     margin-top: 20px;
     width: 100%;
     height: 300px;
-    background-color: red;
+    /* background-color: red; */
   }
 
   .embla__slide:nth-child(1) {
