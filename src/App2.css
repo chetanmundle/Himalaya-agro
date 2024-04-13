@@ -1,15 +1,10 @@
 .Section2 {
-    height: 500px;
+    
     background-color: rgb(239, 236, 235);
     display: flex;
     gap: 3%;
     padding: 5%;
-
-
-    /* padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5%;
-    padding-bottom: 5%; */
+   padding-top: 10%;
 
 }
 
@@ -23,6 +18,13 @@
     font-weight: bold;
     padding: 20px;
 }
+.basket-cards{
+    display: flex !important;
+    flex-direction: row !important; /* To arrange the cards horizontally */
+    gap: 2%; /* Gap between the cards */
+    justify-content: space-between;
+}
+
 
 
 /* card section */
@@ -104,36 +106,68 @@
     transition: all 0.5s;
 }
 
-.card-img img:hover {
+.fruitbox:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
-@media (min-width: 576px) {
+
+/* for ipad */
+
+@media (min-width: 768px) and (max-width: 1116px) {
+    /* Your CSS styles for iPads in landscape orientation here */
     .Section2 {
-        flex-direction: column;
-        height: auto;
-        align-items: center; /* Remove fixed height */
+        /* Example styles */
+        display: flex;
+        flex-direction: column; /* Ensure elements stack vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center;
+     
+        
+    }
+    .sec-chaild {
+        width: 100%;
+        gap: 2%;
+        margin-bottom: 5%;
+    }
+    .Section2-Qaulity-heading{
+        font-size: 2rem;
+       
+       font-weight: bold;
+     
     }
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-    .Section2 {
-        padding: 3%; /* Adjust padding */
-    }
-}
+/* for mobile phones */
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+@media (max-width: 767px) {
     .Section2 {
-        gap: 1%; /* Adjust gap between flex items */
+        /* Example styles */
+        display: flex;
+        flex-direction: column; /* Ensure elements stack vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center;
+        
     }
-}
+    .Section2 .basket-cards{
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .Section2 {
-        padding: 2%; /* Further adjust padding */
+        flex-direction: column !important;
+          
+    }
+     .basket-cards > *{
+           margin-bottom: 10%;
+     }
+
+    .Section2 > * {
+        margin-bottom: 10%; /* Adjust the value as needed */
+    }
+    .sec-chaild {
+        width: 100%;
+        
+    }
+    .Section2-Qaulity-heading{
+        font-size: 1rem;
+      
+     
     }
 }
