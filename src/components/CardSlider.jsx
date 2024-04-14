@@ -154,9 +154,9 @@ export default function CardSlider() {
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        pagination={{
-          type: "fraction",
-        }}
+        // pagination={{
+        //   type: "fraction",
+        // }}
         navigation={true}
         virtual={false}
         loop={true}
