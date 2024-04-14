@@ -1,4 +1,5 @@
 import React from "react";
+import redapple from "../assets/redapple.png";
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         Designd and Developed by
         <strong>
           <span>
-            <a href="https://www.royalswebtech.com/"target="_blank">
+            <a href="https://www.royalswebtech.com/" target="_blank">
               <i> @ Royals WebTech </i>
             </a>
           </span>

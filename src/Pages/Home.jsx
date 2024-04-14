@@ -11,10 +11,10 @@ const Home = () => {
   return (
     <>
       <Carousel />
-      <CardSlider />
-      <Section2 />
       <SwiperSlider />
+      <Section2 />
 
+      <CardSlider />
       <Ads />
     </>
   );

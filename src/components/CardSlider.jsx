@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import redapple from "../assets/redapple.png";
+import redapple1 from "../assets/redapple1.jpeg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,6 +15,68 @@ export default function CardSlider() {
   const [swiperRef, setSwiperRef] = useState(null);
   const appendNumber = useRef(500);
   const prependNumber = useRef(1);
+  const [fruitData, setFruidData] = useState([
+    {
+      id: 1,
+      name: "First Fruit",
+      img: redapple,
+      price: 299,
+    },
+    {
+      id: 2,
+      name: "Second Fruit",
+      img: redapple,
+      price: 299,
+    },
+    {
+      id: 3,
+      name: "Third Fruit",
+      img: redapple,
+      price: 299,
+    },
+    {
+      id: 4,
+      name: "fourth Fruit",
+      img: redapple,
+      price: 299,
+    },
+    {
+      id: 5,
+      name: "Fifth Fruit",
+      img: redapple,
+      price: 299,
+    },
+    {
+      id: 6,
+      name: "Sixth Fruit",
+      img: redapple,
+      price: 299,
+    },
+    {
+      id: 7,
+      name: "Seventh Fruit",
+      img: redapple,
+      price: 299,
+    },
+    {
+      id: 8,
+      name: "Eaith Fruit",
+      img: redapple,
+      price: 299,
+    },
+    {
+      id: 9,
+      name: "Ninth Fruit",
+      img: redapple,
+      price: 299,
+    },
+    {
+      id: 10,
+      name: "Tenth Fruit",
+      img: redapple,
+      price: 299,
+    },
+  ]);
   // Create array with 500 slides
   const [slides, setSlides] = useState(
     Array.from({ length: 500 }).map((_, index) => `Slide ${index + 1}`)
@@ -41,44 +104,45 @@ export default function CardSlider() {
     <>
       <style>
         {`
-            
+
 .swiper-main {
     width: 100%;
     height: 100%;
     padding:0 20px 0 20px;
-    
+
   }
-  
+
   .swiper-slide-m {
     text-align: center;
     font-size: 18px;
     background: #fff;
-    border: 1px solid green;
-  
+
+
     /* Center slide text vertically */
     display: flex;
    justify-content: center;
    /* align-items: center;*/
-    
-    
+
   }
-  
-  .swiper-slide-m img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+
+  // .swiper-slide-m img {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  // }
+
   .swiper-main {
     width: 100%;
-  //  height: 300px;
+   height: 300px;
     margin: 20px auto;
   }
- 
-  
+
             `}
       </style>
+      <div className="swiper-h2">
+        <h2>Our Product</h2>
+      </div>
       <Swiper
         modules={[Autoplay, Virtual, Navigation, Pagination]}
         onSwiper={setSwiperRef}
@@ -94,7 +158,9 @@ export default function CardSlider() {
           type: "fraction",
         }}
         navigation={true}
-        virtual
+        virtual={false}
+        loop={true}
+        loopAdditionalSlides={0}
         className="swiper-main"
         breakpoints={{
           // when window width is <= 640px
@@ -119,37 +185,64 @@ export default function CardSlider() {
             {slideContent}
           </SwiperSlide>
         ))} */}
-        <SwiperSlide className="swiper-slide-m">
-          <div className="cardslider-half">
-            {/* <Image src={redapple} width={100} height={50} /> */}
-            {/* <img src={redapple} alt="" height="180px"/> */}
-          </div>
-        </SwiperSlide>
-        <SwiperSlide className="swiper-slide-m">Second Slide</SwiperSlide>
-        <SwiperSlide className="swiper-slide-m">Third Slide</SwiperSlide>
-        <SwiperSlide className="swiper-slide-m">Fourth Slide</SwiperSlide>
-        <SwiperSlide className="swiper-slide-m">Fifth Slide</SwiperSlide>
-        <SwiperSlide className="swiper-slide-m">Sixth Slide</SwiperSlide>
-        <SwiperSlide className="swiper-slide-m">Seventh Slide</SwiperSlide>
-      </Swiper>
 
-      {/* <p className="append-buttons">
-        <button onClick={() => prepend()} className="prepend-2-slides">
-          Prepend 2 Slides
-        </button>
-        <button onClick={() => slideTo(1)} className="prepend-slide">
-          Slide 1
-        </button>
-        <button onClick={() => slideTo(250)} className="slide-250">
-          Slide 250
-        </button>
-        <button onClick={() => slideTo(500)} className="slide-500">
-          Slide 500
-        </button>
-        <button onClick={() => append()} className="append-slides">
-          Append Slide
-        </button>
-      </p> */}
+        {fruitData.map((data, index) => (
+          <SwiperSlide className="swiper-slide-m" key={index}>
+            <div class="cardslider-card">
+              <div class="cardslider-image_container">
+                <div className="cardslider-half">
+                  <img src={data.img} alt="" />
+                </div>
+              </div>
+              <div class="cardslider-title">
+                <span>{data.name}</span>
+              </div>
+              <div class="cardslider-size">
+                <span>Kg</span>
+                <ul class="cardslider-list-size">
+                  <li class="cardslider-item-list">
+                    <button class="cardslider-item-list-button">1</button>
+                  </li>
+                  <li class="cardslider-item-list">
+                    <button class="cardslider-item-list-button">2</button>
+                  </li>
+                  <li class="cardslider-item-list">
+                    <button class="cardslider-item-list-button">5</button>
+                  </li>
+                  <li class="cardslider-item-list">
+                    <button class="cardslider-item-list-button">10</button>
+                  </li>
+                  <li class="cardslider-item-list">
+                    <button class="cardslider-item-list-button">20</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="cardslider-action">
+                <div class="cardslider-price">
+                  <span>₹{data.price}/Kg</span>
+                </div>
+                <button class="cardslider-cart-button">
+                  <svg
+                    class="cardslider-cart-icon"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                  <span>Add to cart</span>
+                </button>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </>
   );
 }
