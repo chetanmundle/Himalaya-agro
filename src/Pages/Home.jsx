@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <>
       <Carousel />
-      <CardSlider />
+      {/* <CardSlider /> */}
       <Section2 />
       <SwiperSlider />
 

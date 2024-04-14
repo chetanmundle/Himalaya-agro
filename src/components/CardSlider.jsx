@@ -1,5 +1,7 @@
 import React, { useRef, useState } from "react";
-import redapple from "../assets/redapple.png";
+import Card from "./Card";
+import redapple from "../assets/readymadefruit.jpg";
+// import { Card, CardHeader, CardBody, CardFooter, Stack, Heading, Divider, StackDivider, ButtonGroup, Button, Text } from '@chakra-ui/react'
 
 // Import Swiper styles
 import "swiper/css";
@@ -63,12 +65,12 @@ export default function CardSlider() {
     
   }
   
-  .swiper-slide-m img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  // .swiper-slide-m img {
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  // }
   
   .swiper-main {
     width: 100%;
@@ -119,14 +121,47 @@ export default function CardSlider() {
             {slideContent}
           </SwiperSlide>
         ))} */}
-        <SwiperSlide className="swiper-slide-m">
+        <SwiperSlide >
+      <div className="swiper-slide-m">
           <div className="cardslider-half">
-            {/* <Image src={redapple} width={100} height={50} /> */}
+            <Image src={redapple}  className="carslider-img"/>
             {/* <img src={redapple} alt="" height="180px"/> */}
           </div>
+       </div>
         </SwiperSlide>
-        <SwiperSlide className="swiper-slide-m">Second Slide</SwiperSlide>
-        <SwiperSlide className="swiper-slide-m">Third Slide</SwiperSlide>
+        {/* <SwiperSlide >
+        <Card maxW='sm'>
+  <CardBody>
+    <Image
+      src='https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+      alt='Green double couch with wooden legs'
+      borderRadius='lg' 
+    />
+    <Stack mt='6' spacing='3'>
+      <Heading size='md'>Living room Sofa</Heading>
+      <Text>
+        This sofa is perfect for modern tropical spaces, baroque inspired
+        spaces, earthy toned spaces and for people who love a chic design with a
+        sprinkle of vintage design.
+      </Text>
+      <Text color='blue.600' fontSize='2xl'>
+        $450
+      </Text>
+    </Stack>
+  </CardBody>
+  <Divider />
+  <CardFooter>
+    <ButtonGroup spacing='2'>
+      <Button variant='solid' colorScheme='blue'>
+        Buy now
+      </Button>
+      <Button variant='ghost' colorScheme='blue'>
+        Add to cart
+      </Button>
+    </ButtonGroup>
+  </CardFooter>
+</Card></SwiperSlide> */}
+        <SwiperSlide ><Card /></SwiperSlide>
         <SwiperSlide className="swiper-slide-m">Fourth Slide</SwiperSlide>
         <SwiperSlide className="swiper-slide-m">Fifth Slide</SwiperSlide>
         <SwiperSlide className="swiper-slide-m">Sixth Slide</SwiperSlide>
