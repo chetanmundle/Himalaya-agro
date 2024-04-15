@@ -541,3 +541,244 @@
   
   
   }
+
+
+
+  /* certificate */
+  .certificate {
+    --white: hsl(0, 7%, 60%);
+    --black: hsl(240, 15%, 9%);
+    --stone-300: hsl(28, 62%, 88%);
+    --pink-500: hsl(299, 100%, 83%);
+  
+    cursor: pointer;
+  
+    position: relative;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sub-certificate {
+    display: flex;
+    align-items: center;
+  
+    padding: 0.75rem;
+    min-width: 11.5rem;
+    height: 2.25rem;
+    background-color: var(--stone-300);
+  }
+  .sub-certificate.category {
+    justify-content: space-between;
+  
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+  
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+  .sub-certificatet.named {
+    justify-content: center;
+  
+    border-radius: 0rem 0rem 0.5rem 0.5rem;
+  
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+  }
+  
+  /* .certificate:hover .sub-certificate.category {
+    transform: translateY(100%);
+  } */
+  /* .certificate:hover .sub-certificate.named {
+    transform: translateY(-100%);
+  }
+   */
+  .sub-certificate .text_span {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--black);
+    text-transform: capitalize;
+  }
+  
+  
+  
+  .certificate_container {
+    overflow: hidden;
+  
+    position: relative;
+    z-index: 5;
+  
+    width: 17rem;
+    height: 14rem;
+    /* background-color: var(--pink-500); */
+    
+  
+    border-radius: 0.5rem;
+  }
+  .certificate_container::before {
+    content: "";
+  
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: 0rem;
+    aspect-ratio: 1;
+    background-color: hsl(240, 15%, 9%, 0.2);
+  
+    border-radius: 50%;
+    transform-origin: center;
+  
+    transition: all 1s cubic-bezier(1, 0, 0, 1) 0.2s;
+  }
+  .certificate_container::after {
+    content: "See more";
+  
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    padding: 0rem;
+    box-sizing: border-box;
+    width: 0rem;
+    aspect-ratio: 1;
+    background-color: hsl(240, 15%, 9%, 0.5);
+  
+    font-size: 0rem;
+    font-weight: bold;
+    color: var(--white);
+    text-align: center;
+  
+    border-radius: 50%;
+    transform-origin: center;
+  
+    transition: all 1s cubic-bezier(1, 0, 0, 1) 0s;
+  }
+  
+  /* .certificate:hover .certificate_container::before {
+    width: 22.5rem;
+  
+    transition: all 1s cubic-bezier(1, 0, 0, 1) 0s;
+  } */
+  /* .certificate:hover .certificate_container::after {
+    padding: 1rem;
+    width: 5rem;
+  
+    font-size: 0.75rem;
+  
+    transition: all 0.3s ease-in-out 0.4s;
+  } */
+  
+  .certificate_container .image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    width: 3rem;
+    fill: var(--black);
+  }
+
+
+  /* gallery */
+
+  /* gallery */
+.gallery{
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  padding: 0 12px;
+
+
+}
+
+.gallery .pics{
+  -webkit-transition: all 350ms ease;
+  transition:all 350ms ease;
+  cursor: pointer;
+  margin-bottom: 12px;
+
+}
+
+.gallery .pics:hover{
+  filter:opacity(.8);
+}
+
+@media (max-width:991px){
+  .gallery{
+    -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  
+  }
+}
+
+@media (max-width:480px){
+  .gallery{
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+    -webkit-column-width: 100%;
+    -moz-column-width: 100%;
+    column-width: 100%;
+  }
+
+}
+
+/* model */
+.model{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  transition: opacity.4s ease , visibility .4s ease, transform .5s ease-in-out ;
+  visibility: hidden;
+  opacity:0 ;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.model.open{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.model img{
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  margin: 0 auto;
+}
+
+.model.open .svg{
+  position: fixed;
+  top:10px;
+  right: 10px;
+  width: 5 rem;
+  height: 5rem;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  cursor: pointer;
+}
+  
