@@ -20,20 +20,20 @@ const SwiperSlider = () => {
     <>
       <style>
         {`
-          .swiper {
+          .swiperslide-swiper {
             width: 100%;
             padding-top: 50px;
             padding-bottom: 50px;
           }
 
-          .swiper-slide {
+          .swiperslide-swiper-slide {
             background-position: center;
             background-size: cover;
             width: 300px;
             height: 300px;
           }
 
-          .swiper-slide img {
+          .swiperslide-swiper-slide img {
             display: block;
             width: 300px;
             height: 300px;
@@ -59,6 +59,9 @@ const SwiperSlider = () => {
           modifier: 1,
           slideShadows: true,
         }}
+        
+        loop={true}
+        loopAdditionalSlides={0}
         pagination={true}
         autoplay={{
           delay: 1000,
@@ -66,57 +69,57 @@ const SwiperSlider = () => {
           pauseOnMouseEnter: true,
         }}
         modules={[Autoplay, EffectCoverflow, Pagination]}
-        className="mySwiper"
+        className="mySwiper swiperslide-swiper"
       >
-        <SwiperSlide>
+        <SwiperSlide className="swiperslide-swiper-slide">
           <img src={apple} alt="nature-1" />
           <div className="swiper-htext">
             <Button>View More</Button>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperslide-swiper-slide">
           <img src={banana} alt="nature-2" />
           <div className="swiper-htext">
             <Button>View More</Button>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperslide-swiper-slide">
           <img src={grapes} alt="nature-3" />
           <div className="swiper-htext">
             <Button>View More</Button>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperslide-swiper-slide">
           <img src={kiwi} alt="nature-4" />
           <div className="swiper-htext">
             <Button>View More</Button>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperslide-swiper-slide">
           <img src={orange} alt="nature-5" />
           <div className="swiper-htext">
             <Button>View More</Button>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperslide-swiper-slide">
           <img src={pineapple} alt="nature-6" />
           <div className="swiper-htext">
             <Button>View More</Button>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperslide-swiper-slide">
           <img src={strobery} alt="nature-7" />
           <div className="swiper-htext">
             <Button>View More</Button>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperslide-swiper-slide">
           <img src={cherry} alt="nature-8" />
           <div className="swiper-htext">
             <Button>View More</Button>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="swiperslide-swiper-slide">
           <img src={mango} alt="nature-9" />
           <div className="swiper-htext">
             <Button>View More</Button>

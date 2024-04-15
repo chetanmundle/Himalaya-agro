@@ -6,16 +6,19 @@ import SwiperSlider from "./SwiperSlider";
 import Ads from "../components/Ads";
 import Footer from "../components/Footer";
 import CardSlider from "../components/CardSlider";
+import Getintouch from "../components/GetInTouch";
 
 const Home = () => {
   return (
     <>
       <Carousel />
-      {/* <CardSlider /> */}
-      <Section2 />
       <SwiperSlider />
+      <Section2 />
 
+      <CardSlider />
+      <Getintouch/>
       <Ads />
+     
     </>
   );
 };
