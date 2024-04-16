@@ -8,11 +8,13 @@ import Footer from "../components/Footer";
 import CardSlider from "../components/CardSlider";
 import Getintouch from "../components/GetInTouch";
 import CertificateSlide from "../components/CertificateSlide";
+import Carousel1 from "../components/Carousel1";
 
 const Home = () => {
   return (
     <>
-      <Carousel />
+      {/* <Carousel /> */}
+      <Carousel1/>
       <SwiperSlider />
       <Section2 />
 
