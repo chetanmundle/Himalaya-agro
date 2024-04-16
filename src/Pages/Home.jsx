@@ -9,6 +9,7 @@ import CardSlider from "../components/CardSlider";
 import Getintouch from "../components/GetInTouch";
 import CertificateSlide from "../components/CertificateSlide";
 import Carousel1 from "../components/Carousel1";
+import CardSlider1 from "../components/CardSlider1";
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
       <SwiperSlider />
       <Section2 />
 
-      <CardSlider />
+      <CardSlider1/>
       <Getintouch/>
       <CertificateSlide />
       <Ads />

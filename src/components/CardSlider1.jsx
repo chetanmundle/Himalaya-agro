@@ -1,11 +1,14 @@
 import React, { useRef, useState } from "react";
-import redapple from "../assets/redapple.png";
-
+import redapple1 from "../assets/redapple1.jpeg";
 import banana from "../assets/banana.png";
-import certi1 from "../assets/certi1.jpg";
-import certi2 from "../assets/certi2.jpg";
-import certi3 from "../assets/certi3.jpg";
-import certi4 from "../assets/certi4.jpg";
+import mango1 from "../assets/mango1.png";
+import orange1 from "../assets/orange1.png";
+import strobery1 from "../assets/strobery1.png";
+import tomato1 from "../assets/tomato1.png";
+import carrot from "../assets/carrot.png";
+import pineapple1 from "../assets/pineapple1.png";
+import cheery from "../assets/cheery.png";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,41 +19,66 @@ import { Autoplay, Navigation, Pagination, Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Image } from "@chakra-ui/react";
 
-export default function CertificateSlide() {
+export default function CardSlider1() {
   const [swiperRef, setSwiperRef] = useState(null);
   const appendNumber = useRef(500);
   const prependNumber = useRef(1);
-  const [certificateData, setCertificateData] = useState([
+  const [fruitData, setFruidData] = useState([
     {
       id: 1,
-      name: "Himalaya Agro Multi Services",
-      img: certi1,
-      info: "Krushi Vibhag",
+      name: "Apple",
+      img: redapple1,
+      price: 299,
     },
     {
       id: 2,
-      name: "Pravin Bhongale",
-      img: certi2,
-      info: "Riseup Moment",
+      name: "Banana",
+      img: banana,
+      price: 299,
     },
     {
       id: 3,
-      name: "Pravin Bhongale",
-      img: certi3,
-      info: "ICAR",
+      name: "Cherry",
+      img: cheery,
+      price: 189,
     },
     {
       id: 4,
-      name: "Farmer Exportt",
-      img: certi4,
-      info: "Agro Vision",
+      name: "Mango",
+      img: mango1,
+      price: 89,
     },
     {
-      id: 4,
-      name: "Himalaya Agro Multi Services",
-      img: certi1,
-      info: "Krushi Vibhag",
+      id: 5,
+      name: "Orange",
+      img: orange1,
+      price: 129,
     },
+    {
+      id: 6,
+      name: "Stroberry",
+      img: strobery1,
+      price: 159,
+    },
+    {
+      id: 7,
+      name: "Tomato",
+      img: tomato1,
+      price: 40,
+    },
+    {
+      id: 8,
+      name: "Carrod",
+      img: carrot,
+      price: 50,
+    },
+    {
+      id: 9,
+      name: "Pine Apple",
+      img: pineapple1,
+      price: 90,
+    },
+ 
   ]);
   // Create array with 500 slides
   const [slides, setSlides] = useState(
@@ -84,7 +112,7 @@ export default function CertificateSlide() {
     width: 100%;
     height: 100%;
     padding:0 20px 0 20px;
-     
+
   }
 
   .swiper-slide-m {
@@ -108,14 +136,13 @@ export default function CertificateSlide() {
   .swiper-main {
     width: 100%;
    height: 300px;
-    margin: 60px auto;
+    margin: 20px auto;
   }
 
             `}
       </style>
-
       <div className="swiper-h2">
-        <h2>Our Certificates</h2>
+        <h2>Our Product</h2>
       </div>
       <Swiper
         modules={[Autoplay, Virtual, Navigation, Pagination]}
@@ -160,17 +187,33 @@ export default function CertificateSlide() {
           </SwiperSlide>
         ))} */}
 
-        {certificateData.map((data, index) => (
-          <SwiperSlide className="swiper-slide-m" key={index}>
-            <div class="certificate">
-              <div class="sub-certificate category">
-                <span class="text_span">{data.name}</span>
+        {fruitData.map((data, index) => (
+          <SwiperSlide className="swiper-slide-m" key={data.id}>
+            <div className="test-main-slider-t">
+              <div class="test-main-slider">
+                <img src={data.img} alt="" />
               </div>
-              <div class="certificate_container">
-                <img src={data.img} />
+              <div className="cardslider-name">
+                <h2>{data.name}</h2>
               </div>
-              <div class="sub-certificate named">
-                <span class="text_span">{data.info}</span>
+              <div className="cardslider-price-top">
+                <div><strong>₹{data.price}</strong></div>
+                <div>
+                  <button class="cardslider-CartBtn">
+                    <span class="cardslider-IconContainer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1em"
+                        viewBox="0 0 576 512"
+                        fill="rgb(17, 17, 17)"
+                        class="cardslider-cart"
+                      >
+                        <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
+                      </svg>
+                    </span>
+                    <p class="cardslider-text">Add to Cart</p>
+                  </button>
+                </div>
               </div>
             </div>
           </SwiperSlide>

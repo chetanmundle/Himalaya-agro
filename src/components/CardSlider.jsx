@@ -21,7 +21,7 @@ export default function CardSlider() {
     {
       id: 1,
       name: "apple",
-      img: redapple,
+      img: "https://www.pngwing.com/en/free-png-bzhca",
       price: 299,
     },
     {
@@ -191,7 +191,7 @@ export default function CardSlider() {
             <div class="cardslider-card">
               <div class="cardslider-image_container">
                 <div className="cardslider-half">
-                  <img src={data.img} alt="" />
+                  <img src={data.img} alt=""  />
                 </div>
               </div>
               <div class="cardslider-title">
