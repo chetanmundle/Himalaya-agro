@@ -19,6 +19,8 @@ import img17 from "../assets/g17.jpg"
 import img18 from "../assets/g18.jpg"
 import img19 from "../assets/g19.jpg"
 import img20 from "../assets/g20.jpg"
+import img21 from "../assets/g21.jpg"
+import img22 from "../assets/g22.jpg"
 import { IoMdClose } from "react-icons/io";
 
 
@@ -108,6 +110,14 @@ const Gallery = () => {
             id:20,
             imgsrc:img20,
         },
+        {
+            id:21,
+            imgsrc:img21,
+        },
+        {
+            id:22,
+            imgsrc:img22,
+        },
     ]
    const [model,setModel] = useState(false);
    const [tempimgsrc, setTemimgsrc] = useState('');
@@ -119,7 +129,7 @@ const Gallery = () => {
 
   return (
     <>
-      <h1>Image Gallery</h1>
+      <h1  className='gallery-heading'>Image Gallery</h1>
       <div  className = {model ? 'model open' : 'model'}>
       <img src={tempimgsrc}/>
       <IoMdClose className='svg' onClick={()=> setModel(false)}/>

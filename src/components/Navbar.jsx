@@ -63,9 +63,9 @@ const Navbar = () => {
             <nav role="navigation">
               <ul className={isnavOpen ? "" : "hidediv"}>
                 <li>
-                  <a href="#">
+                  <Link to ="/">
                     <strong>Home</strong>
-                  </a>
+                  </Link>
                 </li>
                 <li className="dropdown">
                   <a href="#" aria-haspopup="true">

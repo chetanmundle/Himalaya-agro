@@ -689,6 +689,13 @@
   /* gallery */
 
   /* gallery */
+
+  .gallery-heading{
+    font-size: 2.5rem;
+    font-family:sans-serif;
+    margin: 3%;
+   
+  }
 .gallery{
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -696,7 +703,7 @@
   -webkit-column-width: 33%;
   -moz-column-width: 33%;
   column-width: 33%;
-  padding: 0 12px;
+  padding: 0 15px;
 
 
 }
