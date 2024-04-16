@@ -187,7 +187,7 @@ export default function CardSlider() {
         ))} */}
 
         {fruitData.map((data, index) => (
-          <SwiperSlide className="swiper-slide-m" key={index}>
+          <SwiperSlide className="swiper-slide-m" key={data.id}>
             <div class="cardslider-card">
               <div class="cardslider-image_container">
                 <div className="cardslider-half">
