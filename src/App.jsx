@@ -10,6 +10,7 @@ import Home from "./Pages/Home";
 import FlotingCartBtn from "./components/FlotingCartBtn";
 import Test from "./Pages/Test";
 import Footer from "./components/Footer";
+import Gallery from "./Pages/Gallery";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/Gallery" element={<Gallery/>} />
       </Routes>
 
       <Footer/>

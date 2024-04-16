@@ -5,6 +5,7 @@ import { FaWhatsapp, FaFacebook, FaInstagram, FaSearch } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isnavOpen, setIsNavOpen] = useState(false);
@@ -62,9 +63,9 @@ const Navbar = () => {
             <nav role="navigation">
               <ul className={isnavOpen ? "" : "hidediv"}>
                 <li>
-                  <a href="#">
+                  <Link to ="/">
                     <strong>Home</strong>
-                  </a>
+                  </Link>
                 </li>
                 <li className="dropdown">
                   <a href="#" aria-haspopup="true">
@@ -73,13 +74,13 @@ const Navbar = () => {
                   </a>
                   <ul className="dropdown-content" aria-label="submenu">
                     <li>
-                      <a href="#">Project-1</a>
+                      <a href="#">Apple</a>
                     </li>
                     <li>
-                      <a href="#">Project-2</a>
+                      <a href="#">Banana</a>
                     </li>
                     <li>
-                      <a href="#">Project-3</a>
+                      <a href="#">Grapes</a>
                     </li>
                   </ul>
                 </li>
@@ -89,17 +90,17 @@ const Navbar = () => {
                   </a>
                   <ul className="dropdown-content" aria-label="submenu">
                     <li>
-                      <a href="#">Article-1</a>
+                      <a href="#">Cherry</a>
                     </li>
                     <li>
-                      <a href="#">Article-2</a>
+                      <a href="#">Mango</a>
                     </li>
                     <li>
-                      <a href="#">Article-3</a>
+                      <a href="#">Orange</a>
                     </li>
                   </ul>
                 </li>
-                <li className="dropdown">
+                {/* <li className="dropdown">
                   <a href="#" aria-haspopup="true">
                     <strong>Vegetables</strong>
                   </a>
@@ -114,13 +115,13 @@ const Navbar = () => {
                       <a href="#">Article-3</a>
                     </li>
                   </ul>
-                </li>
+                </li> */}
 
                 <li className="dropdown">
                   <a href="#" aria-haspopup="true">
                     <strong> About Us</strong>
                   </a>
-                  <ul className="dropdown-content" aria-label="submenu">
+                  {/* <ul className="dropdown-content" aria-label="submenu">
                     <li>
                       <a href="#">Article-1</a>
                     </li>
@@ -130,13 +131,13 @@ const Navbar = () => {
                     <li>
                       <a href="#">Article-3</a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li className="dropdown">
                   <a href="#" aria-haspopup="true">
-                    <strong> More</strong>
+                    <strong> Achivements</strong>
                   </a>
-                  <ul className="dropdown-content" aria-label="submenu">
+                  {/* <ul className="dropdown-content" aria-label="submenu">
                     <li>
                       <a href="#">Article-1</a>
                     </li>
@@ -146,12 +147,12 @@ const Navbar = () => {
                     <li>
                       <a href="#">Article-3</a>
                     </li>
-                  </ul>
+                  </ul> */}
                 </li>
                 <li>
-                  <a href="#">
-                    <strong>News & Blogs</strong>
-                  </a>
+                  <Link to ="/Gallery">
+                    <strong>Gallery</strong>
+                  </Link>
                 </li>
                 <li>
                   <a href="#">

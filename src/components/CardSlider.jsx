@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import redapple from "../assets/redapple.png";
 import redapple1 from "../assets/redapple1.jpeg";
+import banana from "../assets/banana.png"
+import cherry from "../assets/cheery.png"
 
 // Import Swiper styles
 import "swiper/css";
@@ -18,20 +20,20 @@ export default function CardSlider() {
   const [fruitData, setFruidData] = useState([
     {
       id: 1,
-      name: "First Fruit",
+      name: "apple",
       img: redapple,
       price: 299,
     },
     {
       id: 2,
-      name: "Second Fruit",
-      img: redapple,
+      name: "banana",
+      img: banana,
       price: 299,
     },
     {
       id: 3,
-      name: "Third Fruit",
-      img: redapple,
+      name: "Cherry",
+      img: cherry,
       price: 299,
     },
     {
@@ -124,14 +126,12 @@ export default function CardSlider() {
    /* align-items: center;*/
 
   }
-
   // .swiper-slide-m img {
   //   display: block;
   //   width: 100%;
   //   height: 100%;
   //   object-fit: cover;
   // }
-
   .swiper-main {
     width: 100%;
    height: 300px;
