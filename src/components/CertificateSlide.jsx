@@ -6,6 +6,8 @@ import certi1 from "../assets/certi1.jpg"
 import certi2 from "../assets/certi2.jpg"
 import certi3 from "../assets/certi3.jpg"
 import certi4 from "../assets/certi4.jpg"
+import certi5 from "../assets/certi5.jpg"
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -48,9 +50,9 @@ export default function CertificateSlide() {
     },
     {
         id: 4,
-        name: "Himalaya Agro Multi Services",
-        img: certi1,
-        info: "Krushi Vibhag",
+        name: "Pravin Bhongale",
+        img: certi5,
+        info: "Symbiosis",
       }
 
   ]);
