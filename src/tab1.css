@@ -58,4 +58,9 @@
   .ads-container {
     height: 640px;
   }
+
+  .abouthome-data {
+    padding: 0 0 0 15px;
+    text-align: justify;
+  }
 }

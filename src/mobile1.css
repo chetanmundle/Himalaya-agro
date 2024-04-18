@@ -141,5 +141,16 @@
     font-weight: bold;
     font-size: 20px;
   }
+
+  .abouthome-data-head{
+    flex-direction: column;
+  }
+  .abouthome-data{
+    padding: 0;
+    padding-top: 20px;
+    text-align: justify;
+  }
+
+
   
 }
