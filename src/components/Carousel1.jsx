@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,8 +6,14 @@ import firstimg from "../assets/8.jpg";
 import secondimg from "../assets/7.jpg";
 import thirdimg from "../assets/4.jpg";
 import fourthimg from "../assets/5.jpg";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Carousel1 = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleSlideChange = (swiper) => {
+    setCurrentIndex(swiper.realIndex);
+  };
   return (
     <>
       <style>
@@ -65,44 +71,85 @@ const Carousel1 = () => {
         }}
         // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
+        onSlideChange={handleSlideChange}
         className="mySwiper carousel1-swiper"
       >
         <SwiperSlide className="carousel1-swiper-slide">
-          <div className="carousel1-datatop">
-            <h1>Fresh From The Farm Delivered To Your Door</h1>
-            <p>Great Fruit and Veg, Made Easy!</p>
-            <button className="carousel1-purchasebtn">Purchase Now</button>
-          </div>
+          <AnimatePresence>
+            {currentIndex === 0 && (
+              <motion.div
+                className="carousel1-datatop"
+                initial={{ y: 100, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                key="first_index"
+              >
+                <h1>Fresh From The Farm Delivered To Your Door</h1>
+                <p>Great Fruit and Veg, Made Easy!</p>
+                <button className="carousel1-purchasebtn">Purchase Now</button>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <div>
             <img src={firstimg} alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide className="carousel1-swiper-slide">
-          <div className="carousel1-datatop1">
-            <h1>Your Journey to Fresh Fruits Starts Here!</h1>
-            <p>Fruitful Discoveries Await</p>
-            <button className="carousel1-purchasebtn">Purchase Now</button>
-          </div>
+          <AnimatePresence>
+            {currentIndex === 1 && (
+              <motion.div
+                className="carousel1-datatop1"
+                initial={{ x: 200, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 2.5 }}
+                key="second_index"
+              >
+                <h1>Your Journey to Fresh Fruits Starts Here!</h1>
+                <p>Fruitful Discoveries Await</p>
+                <button className="carousel1-purchasebtn">Purchase Now</button>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <div>
             <img src={secondimg} alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide className="carousel1-swiper-slide">
-          <div className="carousel1-datatop">
-            <h1>Bringing You the Finest Fruits, Every Time!</h1>
-            <p>Experience the Essence of Freshness with Us</p>
-            <button className="carousel1-purchasebtn">Purchase Now</button>
-          </div>
+          <AnimatePresence>
+            {currentIndex === 2 && (
+              <motion.div
+                className="carousel1-datatop"
+                initial={{ y: -150, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 2.5 }}
+                key="third_index"
+              >
+                <h1>Bringing You the Finest Fruits, Every Time!</h1>
+                <p>Experience the Essence of Freshness with Us</p>
+                <button className="carousel1-purchasebtn">Purchase Now</button>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <div>
             <img src={thirdimg} alt="" />
           </div>
         </SwiperSlide>
         <SwiperSlide className="carousel1-swiper-slide">
-          <div className="carousel1-datatop1">
-            <h1>Your Journey to Fresh Veggies Starts Here!</h1>
-            <p>Harvesting Nature's Goodness</p>
-            <button className="carousel1-purchasebtn">Purchase Now</button>
-          </div>
+          <AnimatePresence>
+            {currentIndex === 3 && (
+              <motion.div
+                className="carousel1-datatop1"
+                initial={{ x: -150, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 2.5 }}
+                key="forth_index"
+              >
+                <h1>Your Journey to Fresh Veggies Starts Here!</h1>
+                <p>Harvesting Nature's Goodness</p>
+                <button className="carousel1-purchasebtn">Purchase Now</button>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <div>
             <img src={fourthimg} alt="" />
           </div>
