@@ -6,6 +6,7 @@ import firstimg from "../assets/8.jpg";
 import secondimg from "../assets/7.jpg";
 import thirdimg from "../assets/4.jpg";
 import fourthimg from "../assets/5.jpg";
+import { motion } from "framer-motion";
 
 const Carousel1 = () => {
   return (
@@ -68,11 +69,16 @@ const Carousel1 = () => {
         className="mySwiper carousel1-swiper"
       >
         <SwiperSlide className="carousel1-swiper-slide">
-          <div className="carousel1-datatop">
+          <motion.div
+            className="carousel1-datatop"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1>Fresh From The Farm Delivered To Your Door</h1>
             <p>Great Fruit and Veg, Made Easy!</p>
             <button className="carousel1-purchasebtn">Purchase Now</button>
-          </div>
+          </motion.div>
           <div>
             <img src={firstimg} alt="" />
           </div>

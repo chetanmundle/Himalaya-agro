@@ -10,6 +10,7 @@ import Getintouch from "../components/GetInTouch";
 import CertificateSlide from "../components/CertificateSlide";
 import Carousel1 from "../components/Carousel1";
 import CardSlider1 from "../components/CardSlider1";
+import AboutHome from "../components/AboutHome";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <Getintouch/>
       <CertificateSlide />
       <Ads />
+      <AboutHome/>
      
     </>
   );

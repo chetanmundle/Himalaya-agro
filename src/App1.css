@@ -627,3 +627,42 @@ body {
   transition-duration: 0.5s;
   color: white;
 }
+
+.abouthome-main-t {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.abouthome-main {
+  width: 80%;
+  height: auto;
+  border-radius: 33px;
+  background: white;
+  box-shadow: 24px 24px 48px #acacac, -24px -24px 48px #ffffff;
+  padding: 30px;
+}
+
+.abouthome-head {
+  text-align: center;
+  font-size: 26px;
+
+}
+
+.abouthome-data {
+  text-align: center;
+  padding: 40px;
+  
+}
+
+.abouthome-data-head{
+  display: flex;
+}
+
+.flex1{
+  flex: 1;
+}
+.abouthome-imgdiv img{
+  width: auto;
+  height: auto;
+}
