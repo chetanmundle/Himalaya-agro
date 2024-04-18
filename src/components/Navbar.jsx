@@ -134,9 +134,9 @@ const Navbar = () => {
                   </ul> */}
                 </li>
                 <li className="dropdown">
-                  <a href="#" aria-haspopup="true">
+                  <Link to="/Achivements">
                     <strong> Achivements</strong>
-                  </a>
+                  </Link>
                   {/* <ul className="dropdown-content" aria-label="submenu">
                     <li>
                       <a href="#">Article-1</a>

@@ -41,8 +41,7 @@ const Section2 = () => {
                   {/* <span class="tag">type</span> */}
                 </div>
                 <span class="lighter">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Repudiandae voluptas ullam aut incidunt minima.
+                Indulge in nature's bounty with our handpicked assortment of ready-made fruit boxes, bursting with freshness and flavor.
                 </span>
               </div>
             </article>
@@ -62,8 +61,7 @@ const Section2 = () => {
                   {/* <span class="tag">type</span> */}
                 </div>
                 <span class="lighter">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Repudiandae voluptas ullam aut incidunt minima.
+                Discover the epitome of gourmet elegance with our exquisite fruit baskets, brimming with hand-selected fruits of unparalleled quality and freshness.
                 </span>
               </div>
             </article>

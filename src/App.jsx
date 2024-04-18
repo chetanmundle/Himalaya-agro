@@ -11,6 +11,7 @@ import FlotingCartBtn from "./components/FlotingCartBtn";
 import Test from "./Pages/Test";
 import Footer from "./components/Footer";
 import Gallery from "./Pages/Gallery";
+import Achivements from "./Pages/Achivements";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Gallery" element={<Gallery/>} />
+        <Route path="/Achivements" element={<Achivements /> } />
       </Routes>
 
       <Footer/>

@@ -1,11 +1,11 @@
 import React, { useRef, useState } from "react";
 import redapple from "../assets/redapple.png";
 
-import banana from "../assets/banana.png";
-import certi1 from "../assets/certi1.jpg";
-import certi2 from "../assets/certi2.jpg";
-import certi3 from "../assets/certi3.jpg";
-import certi4 from "../assets/certi4.jpg";
+import banana from "../assets/banana.png"
+import certi1 from "../assets/certi1.jpg"
+import certi2 from "../assets/certi2.jpg"
+import certi3 from "../assets/certi3.jpg"
+import certi4 from "../assets/certi4.jpg"
 
 // Import Swiper styles
 import "swiper/css";
@@ -46,11 +46,12 @@ export default function CertificateSlide() {
       info: "Agro Vision",
     },
     {
-      id: 4,
-      name: "Himalaya Agro Multi Services",
-      img: certi1,
-      info: "Krushi Vibhag",
-    },
+        id: 4,
+        name: "Himalaya Agro Multi Services",
+        img: certi1,
+        info: "Krushi Vibhag",
+      }
+
   ]);
   // Create array with 500 slides
   const [slides, setSlides] = useState(
