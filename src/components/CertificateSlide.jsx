@@ -6,8 +6,6 @@ import certi1 from "../assets/certi1.jpg"
 import certi2 from "../assets/certi2.jpg"
 import certi3 from "../assets/certi3.jpg"
 import certi4 from "../assets/certi4.jpg"
-import certi5 from "../assets/certi5.jpg"
-
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,7 +17,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Image } from "@chakra-ui/react";
 
 export default function CertificateSlide() {
-
   const [swiperRef, setSwiperRef] = useState(null);
   const appendNumber = useRef(500);
   const prependNumber = useRef(1);
@@ -50,9 +47,9 @@ export default function CertificateSlide() {
     },
     {
         id: 4,
-        name: "Pravin Bhongale",
-        img: certi5,
-        info: "Symbiosis",
+        name: "Himalaya Agro Multi Services",
+        img: certi1,
+        info: "Krushi Vibhag",
       }
 
   ]);
@@ -117,7 +114,7 @@ export default function CertificateSlide() {
 
             `}
       </style>
-      
+
       <div className="swiper-h2">
         <h2>Our Certificates</h2>
       </div>
@@ -167,18 +164,16 @@ export default function CertificateSlide() {
         {certificateData.map((data, index) => (
           <SwiperSlide className="swiper-slide-m" key={index}>
             <div class="certificate">
-  <div class="sub-certificate category">
-    <span class="text_span">{data.name}</span>
-   
-  </div>
-  <div class="certificate_container">
- <img src={data.img} />
-  </div>
-  <div class="sub-certificate named">
-    <span class="text_span">{data.info}</span>
-  </div>
-</div>
-
+              <div class="sub-certificate category">
+                <span class="text_span">{data.name}</span>
+              </div>
+              <div class="certificate_container">
+                <img src={data.img} />
+              </div>
+              <div class="sub-certificate named">
+                <span class="text_span">{data.info}</span>
+              </div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

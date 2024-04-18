@@ -1,8 +1,14 @@
 import React, { useRef, useState } from "react";
-import redapple from "../assets/redapple.png";
 import redapple1 from "../assets/redapple1.jpeg";
-import banana from "../assets/banana.png"
-import cherry from "../assets/cheery.png"
+import banana from "../assets/banana.png";
+import mango1 from "../assets/mango1.png";
+import orange1 from "../assets/orange1.png";
+import strobery1 from "../assets/strobery1.png";
+import tomato1 from "../assets/tomato1.png";
+import carrot from "../assets/carrot.png";
+import pineapple1 from "../assets/pineapple1.png";
+import cheery from "../assets/cheery.png";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,71 +19,66 @@ import { Autoplay, Navigation, Pagination, Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Image } from "@chakra-ui/react";
 
-export default function CardSlider() {
+export default function CardSlider1() {
   const [swiperRef, setSwiperRef] = useState(null);
   const appendNumber = useRef(500);
   const prependNumber = useRef(1);
   const [fruitData, setFruidData] = useState([
     {
       id: 1,
-      name: "apple",
-      img: "https://www.pngwing.com/en/free-png-bzhca",
+      name: "Apple",
+      img: redapple1,
       price: 299,
     },
     {
       id: 2,
-      name: "banana",
+      name: "Banana",
       img: banana,
       price: 299,
     },
     {
       id: 3,
       name: "Cherry",
-      img: cherry,
-      price: 299,
+      img: cheery,
+      price: 189,
     },
     {
       id: 4,
-      name: "fourth Fruit",
-      img: redapple,
-      price: 299,
+      name: "Mango",
+      img: mango1,
+      price: 89,
     },
     {
       id: 5,
-      name: "Fifth Fruit",
-      img: redapple,
-      price: 299,
+      name: "Orange",
+      img: orange1,
+      price: 129,
     },
     {
       id: 6,
-      name: "Sixth Fruit",
-      img: redapple,
-      price: 299,
+      name: "Stroberry",
+      img: strobery1,
+      price: 159,
     },
     {
       id: 7,
-      name: "Seventh Fruit",
-      img: redapple,
-      price: 299,
+      name: "Tomato",
+      img: tomato1,
+      price: 40,
     },
     {
       id: 8,
-      name: "Eaith Fruit",
-      img: redapple,
-      price: 299,
+      name: "Carrod",
+      img: carrot,
+      price: 50,
     },
     {
       id: 9,
-      name: "Ninth Fruit",
-      img: redapple,
-      price: 299,
+      name: "Pine Apple",
+      img: pineapple1,
+      price: 90,
     },
-    {
-      id: 10,
-      name: "Tenth Fruit",
-      img: redapple,
-      price: 299,
-    },
+ 
   ]);
   // Create array with 500 slides
   const [slides, setSlides] = useState(
@@ -188,56 +189,31 @@ export default function CardSlider() {
 
         {fruitData.map((data, index) => (
           <SwiperSlide className="swiper-slide-m" key={data.id}>
-            <div class="cardslider-card">
-              <div class="cardslider-image_container">
-                <div className="cardslider-half">
-                  <img src={data.img} alt=""  />
+            <div className="test-main-slider-t">
+              <div class="test-main-slider">
+                <img src={data.img} alt="" />
+              </div>
+              <div className="cardslider-name">
+                <h2>{data.name}</h2>
+              </div>
+              <div className="cardslider-price-top">
+                <div><strong>₹{data.price}</strong></div>
+                <div>
+                  <button class="cardslider-CartBtn">
+                    <span class="cardslider-IconContainer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="1em"
+                        viewBox="0 0 576 512"
+                        fill="rgb(17, 17, 17)"
+                        class="cardslider-cart"
+                      >
+                        <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"></path>
+                      </svg>
+                    </span>
+                    <p class="cardslider-text">Add to Cart</p>
+                  </button>
                 </div>
-              </div>
-              <div class="cardslider-title">
-                <span>{data.name}</span>
-              </div>
-              <div class="cardslider-size">
-                <span>Kg</span>
-                <ul class="cardslider-list-size">
-                  <li class="cardslider-item-list">
-                    <button class="cardslider-item-list-button">1</button>
-                  </li>
-                  <li class="cardslider-item-list">
-                    <button class="cardslider-item-list-button">2</button>
-                  </li>
-                  <li class="cardslider-item-list">
-                    <button class="cardslider-item-list-button">5</button>
-                  </li>
-                  <li class="cardslider-item-list">
-                    <button class="cardslider-item-list-button">10</button>
-                  </li>
-                  <li class="cardslider-item-list">
-                    <button class="cardslider-item-list-button">20</button>
-                  </li>
-                </ul>
-              </div>
-              <div class="cardslider-action">
-                <div class="cardslider-price">
-                  <span>₹{data.price}/Kg</span>
-                </div>
-                <button class="cardslider-cart-button">
-                  <svg
-                    class="cardslider-cart-icon"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-                      stroke-linejoin="round"
-                      stroke-linecap="round"
-                    ></path>
-                  </svg>
-                  <span>Add to cart</span>
-                </button>
               </div>
             </div>
           </SwiperSlide>
